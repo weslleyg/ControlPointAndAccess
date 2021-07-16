@@ -27,6 +27,7 @@ public class Movement {
   }
 
   @EmbeddedId
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private MovementId id;
   private LocalDateTime entryDate;
   private LocalDateTime exitDate;

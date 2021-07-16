@@ -15,6 +15,7 @@ import lombok.*;
 @Entity
 public class CalendarMovement {
   @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long id;
   @ManyToOne
   private DateType dateType;

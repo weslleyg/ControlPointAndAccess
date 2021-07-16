@@ -7,6 +7,8 @@ import java.time.LocalDateTime;
 import javax.persistence.Embeddable;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 
 import lombok.*;
 
@@ -30,6 +32,7 @@ public class HoursBank {
   }
 
   @EmbeddedId
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private HoursBankId id;
   private LocalDateTime workedDate;
   private BigDecimal quantityHours;

@@ -32,6 +32,7 @@ public class WorkJourneyService {
   }
 
   public WorkJourney update(WorkJourney workJourney) {
+
     return this.workJourneyRepository.save(workJourney);
   }
 

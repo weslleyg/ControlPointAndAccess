@@ -1,7 +1,6 @@
 package com.dio.firstProject.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 import lombok.*;
 
@@ -14,6 +13,7 @@ import lombok.*;
 @Entity
 public class WorkJourney {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String description;
 }
