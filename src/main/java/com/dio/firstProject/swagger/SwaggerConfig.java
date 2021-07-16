@@ -33,7 +33,6 @@ public class SwaggerConfig {
     return new ApiInfoBuilder().title("Api-Rest").description("Api primeiro desafio do bootcamp Santander")
         .version("0.0.1").license("Apache License Version 2.0")
         .licenseUrl("https://www.apache.org/licenses/LICENSE-2.0")
-        .contact(new Contact("DIO", "https://web.digitalinnovation.one", "contato@digitalinnovationone.com.br"))
-        .build();
+        .contact(new Contact("Weslley", "https://github.com/weslleyg", "wesley.dipaulatorres@hotmail.com")).build();
   }
 }
