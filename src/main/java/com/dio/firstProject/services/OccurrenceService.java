@@ -1,6 +1,7 @@
 package com.dio.firstProject.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.dio.firstProject.models.Occurrence;
 import com.dio.firstProject.repositories.OccurrenceRepository;
@@ -23,5 +24,17 @@ public class OccurrenceService {
 
   public List<Occurrence> listAll() {
     return this.occurrenceRepository.findAll();
+  }
+
+  public Optional<Occurrence> listById(Long id) {
+    return this.occurrenceRepository.findById(id);
+  }
+
+  public Occurrence update(Occurrence occurrence) {
+    return this.occurrenceRepository.save(occurrence);
+  }
+
+  public void delete(Long id) {
+    this.occurrenceRepository.deleteById(id);
   }
 }
