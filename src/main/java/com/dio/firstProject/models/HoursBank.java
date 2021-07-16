@@ -9,6 +9,7 @@ import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.ManyToOne;
 
 import lombok.*;
 
@@ -37,4 +38,6 @@ public class HoursBank {
   private LocalDateTime workedDate;
   private BigDecimal quantityHours;
   private BigDecimal totalHours;
+  @ManyToOne
+  private CalendarMovement calendarMovement;
 }
