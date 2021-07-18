@@ -49,7 +49,7 @@ public class CompanyController {
   }
 
   @DeleteMapping("/{id}")
-  public void delete(Long id) {
+  public void delete(@PathVariable("id") Long id) {
     this.companyService.delete(id);
   }
 }

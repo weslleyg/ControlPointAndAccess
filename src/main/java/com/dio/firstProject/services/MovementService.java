@@ -1,7 +1,6 @@
 package com.dio.firstProject.services;
 
 import java.util.List;
-import java.util.Optional;
 
 import com.dio.firstProject.models.Movement;
 import com.dio.firstProject.repositories.MovementRepository;
@@ -26,15 +25,7 @@ public class MovementService {
     return this.movementRepository.findAll();
   }
 
-  public Optional<Movement> listById(Long id) {
-    return this.movementRepository.findById(id);
-  }
-
   public Movement update(Movement movement) {
     return this.movementRepository.save(movement);
-  }
-
-  public void delete(Long id) {
-    this.movementRepository.deleteById(id);
   }
 }

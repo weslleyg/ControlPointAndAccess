@@ -48,8 +48,8 @@ public class OccurrenceController {
     return ResponseEntity.ok(this.occurrenceService.update(occurrence));
   }
 
-  @DeleteMapping("/id")
-  public void delete(@PathVariable Long id) {
+  @DeleteMapping("/{id}")
+  public void delete(@PathVariable("id") Long id) {
     this.occurrenceService.delete(id);
   }
 

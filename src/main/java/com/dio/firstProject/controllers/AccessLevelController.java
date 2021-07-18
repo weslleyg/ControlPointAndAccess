@@ -38,7 +38,7 @@ public class AccessLevelController {
   }
 
   @GetMapping("/{id}")
-  public ResponseEntity<AccessLevel> listById(@PathVariable Long id) {
+  public ResponseEntity<AccessLevel> listById(@PathVariable("id") Long id) {
     return ResponseEntity.ok(this.accessLevelService.listById(id)
         .orElseThrow(() -> new NoSuchElementException("Access level doesn't exists!")));
   }

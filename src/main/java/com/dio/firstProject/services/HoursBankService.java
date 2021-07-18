@@ -1,7 +1,6 @@
 package com.dio.firstProject.services;
 
 import java.util.List;
-import java.util.Optional;
 
 import com.dio.firstProject.models.HoursBank;
 import com.dio.firstProject.repositories.HoursBankRepository;
@@ -26,15 +25,7 @@ public class HoursBankService {
     return this.hoursBankRepository.findAll();
   }
 
-  public Optional<HoursBank> listById(Long id) {
-    return this.hoursBankRepository.findById(id);
-  }
-
   public HoursBank update(HoursBank hoursBank) {
     return this.hoursBankRepository.save(hoursBank);
-  }
-
-  public void delete(Long id) {
-    this.hoursBankRepository.deleteById(id);
   }
 }

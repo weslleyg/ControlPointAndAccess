@@ -20,14 +20,15 @@ public class Movement {
   @AllArgsConstructor
   @NoArgsConstructor
   @EqualsAndHashCode
+  @Getter
+  @Setter
   @Embeddable
-  public class MovementId implements Serializable {
+  public static class MovementId implements Serializable {
     private long movementId;
     private long userId;
   }
 
   @EmbeddedId
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private MovementId id;
   private LocalDateTime entryDate;
   private LocalDateTime exitDate;

@@ -38,18 +38,18 @@ public class DateTypeController {
   }
 
   @GetMapping("/{id}")
-  public ResponseEntity<DateType> listById(@PathVariable Long id) {
+  public ResponseEntity<DateType> listById(@PathVariable("id") Long id) {
     return ResponseEntity.ok(
         this.dateTypeService.listById(id).orElseThrow(() -> new NoSuchElementException("Date type doesn't exists!")));
   }
 
   @PutMapping
-  public ResponseEntity<DateType> update(DateType dateType) {
+  public ResponseEntity<DateType> update(@RequestBody DateType dateType) {
     return ResponseEntity.ok(this.dateTypeService.update(dateType));
   }
 
   @DeleteMapping("/{id}")
-  public void delete(@PathVariable Long id) {
+  public void delete(@PathVariable("id") Long id) {
     this.dateTypeService.delete(id);
   }
 }

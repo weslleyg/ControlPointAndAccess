@@ -26,7 +26,9 @@ public class HoursBank {
   @NoArgsConstructor
   @EqualsAndHashCode
   @Embeddable
-  public class HoursBankId implements Serializable {
+  @Getter
+  @Setter
+  public static class HoursBankId implements Serializable {
     private long hoursBankId;
     private long movementId;
     private long userId;
